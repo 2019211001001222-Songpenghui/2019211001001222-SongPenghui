@@ -8,9 +8,27 @@
         <servlet-name>justhomework</servlet-name>
         <servlet-class>bing.com.week2.demo.HelloWorldServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LifeCydeServlet</servlet-name>
+        <servlet-class>com.Songpenghui.week3.LifeCydeServlet</servlet-class>
+    </servlet>
+    <!--automatic code-->
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>com.Songpenghui.week3.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/register</url-pattern><!--write this url in action -->
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>justhomework</servlet-name>
         <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LifeCydeServlet</servlet-name>
+        <url-pattern>/life</url-pattern>
+        <!--/life == LifeCydeServlet == com.Songpenghui.week3.LifeCydeServlet -->
     </servlet-mapping>
 
 </web-app>
