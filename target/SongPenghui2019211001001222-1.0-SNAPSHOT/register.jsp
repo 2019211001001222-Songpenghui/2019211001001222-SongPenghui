@@ -18,7 +18,7 @@
     Gender: <input type="radio" name="gender">Male <input type="radio" name="gender" value="female">Female<br/>
     <!-- if name is same it make array-->
     Date of Birth :<input type="text name=" name="birthDate"/><br/>
-    <input type="submit" value="register"/>
+    <input type="submit" value="Register"/>
 </from>
 
 
