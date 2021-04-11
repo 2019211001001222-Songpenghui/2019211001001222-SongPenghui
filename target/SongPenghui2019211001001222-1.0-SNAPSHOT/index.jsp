@@ -5,12 +5,9 @@
     <title>JSP - Hello World</title>
 </head>
 <body>
-<a href="http://ecjtu.jx.cn/">go to ecjtu</a><!-- method is GET -->
-<form method="post">
-    <!-- its better use post in form>,data in not added in the URL-->
-    Name :<input type="text" name="name"><br/>
-    ID :<input type="text" name="id"><br/>
-    <input type="submit" value="send date to server"/>
-</form>
+<h1><%= "Hello World!!!" %>
+</h1>
+<br/>
+<a href="hello-servlet">Hello Servlet</a>
 </body>
 </html>
