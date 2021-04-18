@@ -36,5 +36,31 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-engine:5.7.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-engine:1.7.0" level="project" />
     <orderEntry type="library" name="Maven: com.microsoft.sqlserver:mssql-jdbc:8.8.1.jre8" level="project" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/Desktop/java/mysql-connector-java-8.0.23/mysql-connector-java-8.0.23.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES />
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$USER_HOME$/Desktop/java/sqljdbc_7.0/chs/samples/adaptive" />
+          <root url="file://$USER_HOME$/Desktop/java/sqljdbc_7.0/chs/samples/alwaysencrypted" />
+          <root url="file://$USER_HOME$/Desktop/java/sqljdbc_7.0/chs/samples/azureactivedirectoryauthentication" />
+          <root url="file://$USER_HOME$/Desktop/java/sqljdbc_7.0/chs/samples/connections" />
+          <root url="file://$USER_HOME$/Desktop/java/sqljdbc_7.0/chs/samples/constrained" />
+          <root url="file://$USER_HOME$/Desktop/java/sqljdbc_7.0/chs/samples/dataclassification" />
+          <root url="file://$USER_HOME$/Desktop/java/sqljdbc_7.0/chs/samples/datatypes" />
+          <root url="file://$USER_HOME$/Desktop/java/sqljdbc_7.0/chs/samples/resultsets" />
+          <root url="file://$USER_HOME$/Desktop/java/sqljdbc_7.0/chs/samples/sparse" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>
