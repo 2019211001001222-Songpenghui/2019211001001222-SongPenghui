@@ -1,6 +1,7 @@
 package com.Songpenghui.week3;
 
 import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.beans.Statement;
 import java.io.IOException;
@@ -9,6 +10,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 //automatic -new --> servlet
+@WebServlet(name = "RegisterServlet", value = "/register")
 public class RegisterServlet extends HttpServlet {
     public Connection dbConn;
     public void init() {
@@ -20,25 +22,24 @@ public class RegisterServlet extends HttpServlet {
             System.out.println(e); } }
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-doPost(request, response);
+//        doPost(request, response);
+        request.getRequestDispatcher("WEB-INF/views/register.jsp").forward(request,response);
     }
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-// request come here-<from method=post>
-        //get parameter from register
-        String name,password,email,gender,date;
+        String name, password, email, gender, date;
         name = request.getParameter("name");
-        password = request.getParameter("password");email = request.getParameter("email");
-        gender = request.getParameter("gender");date = request.getParameter("date");
+        password = request.getParameter("password");
+        email = request.getParameter("email");
+        gender = request.getParameter("gender");
+        date = request.getParameter("date");
         PrintWriter writer = response.getWriter();
         String[][] r = new String[1000][6];
-        int  a= 0;
+        int a = 0;
         try {
-
             Statement createDbStatement = (Statement) dbConn.createStatement();
             String ADDdbRequire = "insert into usertable values('" + name + "','" + password + "','" + email + "','" + gender + "','" + date + "')";
-            ((java.sql.Statement) createDbStatement).executeUpdate(ADDdbRequire);
+            createDbStatement.executeUpdate(ADDdbRequire);
             //String dbRequire = "select * from usertable";
             //ResultSet resultDb = createDbStatement.executeQuery(dbRequire);
             //while (resultDb.next()) {
@@ -48,5 +49,8 @@ doPost(request, response);
         } catch (Exception e) {
             System.out.println(e);
         }
-        response.sendRedirect("login.jsp");
-}}
+        // writer.println("<table border=\"2\"width=\"80%\"borderColor=\"pink\"bgcolor=\"#DCE3F5\"><tr><td>ID</td><td>UserName</td><td>Password</td><td>Email</td><td>Gender</td><td>Birthdate</td></tr>");
+        // for (int x = 0; x < a; x++) {for (int y = 0; y < 6; y++) { writer.println("<td>" + r[x][y] + "</td>");}
+        // writer.println("</tr>"); }writer.println("</table>");
+        response.sendRedirect("WEB-INF/views/login.jsp");
+    }}
